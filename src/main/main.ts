@@ -1,4 +1,3 @@
-import * as path from 'path';
 import { BrowserWindow, app, App, } from 'electron';
 
 class SampleApp {
@@ -37,4 +36,4 @@ class SampleApp {
   }
 }
 
-const MyApp: SampleApp = new SampleApp(app);
+new SampleApp(app);

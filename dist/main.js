@@ -94,7 +94,43 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var electron__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! electron */ \"electron\");\n/* harmony import */ var electron__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(electron__WEBPACK_IMPORTED_MODULE_0__);\n\nvar SampleApp = /** @class */ (function () {\n    function SampleApp(app) {\n        this.mainWindow = null;\n        this.mainURL = \"file://\" + __dirname + \"/../index.html\";\n        this.app = app;\n        this.app.on('window-all-closed', this.onWindowAllClosed.bind(this));\n        this.app.on('ready', this.create.bind(this));\n        this.app.on('activate', this.onActivated.bind(this));\n    }\n    SampleApp.prototype.onWindowAllClosed = function () {\n        this.app.quit();\n    };\n    SampleApp.prototype.create = function () {\n        var _this = this;\n        this.mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__[\"BrowserWindow\"]({\n            width: 800,\n            height: 400,\n            minWidth: 500,\n            minHeight: 200,\n            acceptFirstMouse: true,\n        });\n        this.mainWindow.loadURL(this.mainURL);\n        this.mainWindow.on('closed', function () { return _this.mainWindow = null; });\n    };\n    SampleApp.prototype.onActivated = function () {\n        if (this.mainWindow === null) {\n            this.create();\n        }\n    };\n    return SampleApp;\n}());\nvar MyApp = new SampleApp(electron__WEBPACK_IMPORTED_MODULE_0__[\"app\"]);\n\n\n//# sourceURL=webpack:///./src/main/main.ts?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var electron__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! electron */ "electron");
+/* harmony import */ var electron__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(electron__WEBPACK_IMPORTED_MODULE_0__);
+
+var SampleApp = /** @class */ (function () {
+    function SampleApp(app) {
+        this.mainWindow = null;
+        this.mainURL = "file://" + __dirname + "/../index.html";
+        this.app = app;
+        this.app.on('window-all-closed', this.onWindowAllClosed.bind(this));
+        this.app.on('ready', this.create.bind(this));
+        this.app.on('activate', this.onActivated.bind(this));
+    }
+    SampleApp.prototype.onWindowAllClosed = function () {
+        this.app.quit();
+    };
+    SampleApp.prototype.create = function () {
+        var _this = this;
+        this.mainWindow = new electron__WEBPACK_IMPORTED_MODULE_0__["BrowserWindow"]({
+            width: 800,
+            height: 400,
+            minWidth: 500,
+            minHeight: 200,
+            acceptFirstMouse: true,
+        });
+        this.mainWindow.loadURL(this.mainURL);
+        this.mainWindow.on('closed', function () { return _this.mainWindow = null; });
+    };
+    SampleApp.prototype.onActivated = function () {
+        if (this.mainWindow === null) {
+            this.create();
+        }
+    };
+    return SampleApp;
+}());
+new SampleApp(electron__WEBPACK_IMPORTED_MODULE_0__["app"]);
+
 
 /***/ }),
 
@@ -105,8 +141,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var elec
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"electron\");\n\n//# sourceURL=webpack:///external_%22electron%22?");
+module.exports = require("electron");
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=main.js.map

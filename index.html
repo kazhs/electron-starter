@@ -10,6 +10,7 @@
     <h1>
       Hello Electron APP
     </h1>
+    <div id="react-root"></div>
     <script>
       try {
         window.electron = require('electron');
@@ -22,5 +23,6 @@
         console.error('Not found electron.');
       }
     </script>
+    <script src="dist/renderer.js"></script>
   </body>
 </html>

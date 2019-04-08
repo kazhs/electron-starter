@@ -4,7 +4,7 @@
   "description": "Electron starter kit",
   "main": "dist/main.js",
   "scripts": {
-    "start": "webpack --progress --colors --bail --mode development"
+    "start": "gulp start"
   },
   "keywords": [
     "electron",
@@ -13,12 +13,16 @@
   "author": "kazhs",
   "license": "MIT",
   "dependencies": {
-    "electron": "^4.1.4",
-    "electron-connect": "^0.6.3"
+    "electron-connect": "^0.6.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@types/electron": "^1.6.10",
     "@types/node": "^11.13.0",
+    "@types/react": "^16.8.13",
+    "@types/react-dom": "^16.8.3",
+    "electron": "^4.1.4",
     "eslint": "^5.16.0",
     "gulp": "^4.0.0",
     "node-loader": "^0.6.0",

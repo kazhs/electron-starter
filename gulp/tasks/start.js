@@ -1,9 +1,9 @@
-const gulp = require('gulp');
+const { series, watch } = require('gulp');
 const { server } = require('electron-connect');
 
 const helpers = require('./../../config/helpers');
 
-const build = require('./build');
+const { build, _buildMain, _buildRenderer } = require('./build');
 
 /**
  * Start Electron for Dev
@@ -15,19 +15,31 @@ const serve = () => {
   electronServer.start();
 
   /**
-   * Watch compiled Electron
+   * Watch compiled Renderer process
+   */
+  const reload = next => {
+    electronServer.reload();
+    next();
+  };
+  watch(
+    helpers.root('src', 'renderer', '**', '*'),
+    series(_buildRenderer, reload)
+  );
+
+  /**
+   * Watch compiled Main process
    */
   const restart = next => next(electronServer.restart());
-  gulp.watch(
+  watch(
     [
       helpers.root('src', 'main', '**', '*'),
       helpers.root('index.html'),
     ],
-    gulp.series(build, restart)
+    series(_buildMain, restart)
   );
 };
 
-const start = gulp.series(
+const start = series(
   build,
   serve
 );
