@@ -1,0 +1,31 @@
+{
+  "name": "electron-starter",
+  "version": "1.0.0",
+  "description": "Electron starter kit",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "webpack --progress --colors --bail --mode development"
+  },
+  "keywords": [
+    "electron",
+    "typescript"
+  ],
+  "author": "kazhs",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^4.1.4",
+    "electron-connect": "^0.6.3"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^11.13.0",
+    "eslint": "^5.16.0",
+    "gulp": "^4.0.0",
+    "node-loader": "^0.6.0",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.2",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": "..",
+    "outDir": "../out-tsc/electron",
+    "baseUrl": "../src/main",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "module": "es2015",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "types": [],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2016"
+    ]
+  },
+  "include": ["../src/main/main.ts"],
+  "exclude": []
+}
