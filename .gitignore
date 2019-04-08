@@ -1,1 +1,5 @@
+## Ignore Dependencies
 node_modules
+
+## Ignore Comiled Files
+dist/
