@@ -2,13 +2,17 @@
   "name": "electron-starter",
   "version": "1.0.0",
   "description": "Electron starter kit",
+  "repository": "https://github.com/kazhs/electron-starter",
   "main": "dist/main.js",
   "scripts": {
     "start": "gulp start"
   },
   "keywords": [
     "electron",
-    "typescript"
+    "typescript",
+    "react",
+    "webpack",
+    "gulp"
   ],
   "author": "kazhs",
   "license": "MIT",
