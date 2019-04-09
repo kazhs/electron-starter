@@ -1,12 +1,10 @@
-import { BrowserWindow, app, App, } from 'electron';
+import { BrowserWindow, app, App } from 'electron';
 
 class SampleApp {
   private mainWindow: BrowserWindow | null = null;
-  private app: App;
   private mainURL: string = `file://${__dirname}/../index.html`;
 
-  constructor(app: App) {
-    this.app = app;
+  constructor(private app: App) {
     this.app.on('window-all-closed', this.onWindowAllClosed.bind(this));
     this.app.on('ready', this.create.bind(this));
     this.app.on('activate', this.onActivated.bind(this));
