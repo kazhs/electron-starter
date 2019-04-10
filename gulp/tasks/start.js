@@ -46,4 +46,4 @@ const start = series(
 start.displayName = 'start';
 start.description = 'Build and watch electron APP';
 
-module.exports = start;
+module.exports = { start };
